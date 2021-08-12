@@ -1,0 +1,86 @@
+/* =========================================================
+list - リストのオブジェクト
+========================================================= */
+
+// ---------------------------------------------------------------
+//  ■シンプルなリスト
+//  liの頭に疑似要素でアイコンを出しています。
+// ---------------------------------------------------------------
+.p-basic-list {
+	display: inline-block;
+	text-align: left;
+
+	&__item {
+		display: block;
+		text-indent: -1.25rem;
+		padding-left: 1.25rem;
+		@extend %basic-txt;
+
+		&:before {
+			content: '\f111';
+			font-family: FontAwesome;
+			color: $sub-color01;
+		}
+
+		&--has-sub-list {
+			.p-basic-list__sub-list {
+				display: block;
+				margin-top: .75rem;
+			}
+		}
+	}
+}
+
+//上のリストの中で使用するサブリスト
+.p-sub-list {
+	display: inline-block;
+	text-align: left;
+
+	&__item {
+		display: block;
+		text-indent: -1.25rem;
+		padding-left: 1.25rem;
+		@extend %basic-txt;
+
+		&:before {
+			content: '\f10c';
+			font-family: FontAwesome;
+			color: $sub-color01;
+		}
+	}
+}
+
+// ---------------------------------------------------------------
+//  ■リンク付きのリスト
+//  疑似要素の矢印のアニメーション付き
+// ---------------------------------------------------------------
+.p-link-list {
+	display: inline-block;
+	text-align: left;
+
+	&__link {
+		display: block;
+		@extend %basic-txt;
+		color: #555555;
+		text-decoration: none;
+		padding: .25rem;
+		transition: .3s;
+
+		&:before {
+			content: '\f105';
+			font-family: FontAwesome;
+			color: $sub-color01;
+			margin-right: .5rem;
+			transition: .3s;
+		}
+
+		&:hover {
+			opacity: .7;
+
+			&:before {
+				margin-left: .25rem;
+				margin-right: .25rem;
+			}
+		}
+	}
+}

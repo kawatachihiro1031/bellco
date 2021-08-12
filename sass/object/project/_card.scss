@@ -1,0 +1,284 @@
+/* =========================================================
+card - カード式レイアウトのオブジェクト
+========================================================= */
+
+// ---------------------------------------------------------------
+//  ■カード式レイアウト
+//  .colの中に入れて使用してください。
+// ---------------------------------------------------------------
+.p-card {
+	border: 1px solid #eeeeee;
+	background-color: #fafafa;
+	border-radius: 4px;
+	@include flexbox;
+	@include flex-dir(column);
+	height: 100%;
+	position: relative;
+
+	&__body {
+		padding: 1.5rem;
+		transition: .3s;
+	}
+
+	&__img {
+		transition: .3s;
+
+		&--top {
+			border-radius: 4px 4px 0 0;
+		}
+
+		&--bottom {
+			margin-top: auto;
+			border-radius: 0 0 4px 4px;
+		}
+	}
+
+	&__link {
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		z-index: 1;
+
+		&:hover {
+			& ~ .p-card {
+				&__img {
+					opacity: .7;
+				}
+
+				&__body {
+					opacity: .7;
+				}
+			}
+		}
+	}
+
+	&__btn {
+		padding: 1.5rem;
+		padding-top: 0;
+		margin-top: auto;
+	}
+
+	&--has-zoom-img {
+		.p-card {
+			&__img {
+				overflow: hidden;
+			}
+
+			&__img-in {
+				transition: .3s;
+			}
+		}
+
+		&:hover {
+			.p-card {
+				&__img-in {
+					transform: scale(1.1, 1.1);
+				}
+			}
+		}
+	}
+
+
+	//  ・下部にボタンを追加したレイアウト
+	// --------------------
+	&--has-btn {
+		.p-card {
+			&__btn-in {
+				&::after {
+					content: '';
+					display: block;
+					position: absolute;
+					top: 0;
+					right: 0;
+					bottom: 0;
+					left: 0;
+					margin: auto;
+					z-index: 1;
+				}
+			}
+
+			&__img--bottom {
+				margin-top: 0;
+			}
+		}
+
+		&:hover {
+			.p-card {
+				&__body,
+				&__img {
+					opacity: .7;
+				}
+			}
+		}
+	}
+}
+
+
+
+.p-bg-img-card {
+	display: block;
+	height: 100%;
+	position: relative;
+	overflow: hidden;
+	min-height: 300px;
+	transition: .3s;
+
+	&::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		transition: .3s;
+	}
+
+	&::after {
+		content: '';
+		display: block;
+		background-color: rgba(0, 0, 0, .3);
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		z-index: 1;
+		transition: .3s;
+	}
+
+	&__in {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		z-index: 2;
+
+		padding: 2rem 1rem;
+		@include flex-center;
+		@include flex-dir(column);
+		transition: .3s;
+
+		@include mq(md, min) {
+			padding: 2rem 1.5rem;
+		}
+
+		@include mq(lg, min) {
+			padding: 3rem 2rem;
+		}
+	}
+
+
+	//  ・カード全体がリンクのレイアウト
+	// --------------------
+	&--has-link {
+		position: relative;
+
+		&:hover {
+			&::before {
+				transform: scale(1.1, 1.1);
+			}
+
+			&::after {
+				opacity: .7;
+			}
+		}
+
+		.p-bg-img-card__link {
+			display: block;
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			z-index: 3;
+		}
+	}
+
+
+	//  ・下部にボタンを追加したレイアウト
+	// --------------------
+	&--has-btn {
+		@include flexbox;
+		@include flex-dir(column);
+		@include flex-just(space-between);
+		@include align-items(center);
+		position: relative;
+
+		&:hover {
+			&::before {
+				transform: scale(1.1, 1.1);
+			}
+
+			&::after {
+				opacity: .7;
+			}
+		}
+
+		.p-bg-img-card__btn {
+			&:after {
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				right: 0;
+				bottom: 0;
+				left: 0;
+				margin: auto;
+				z-index: 3;
+			}
+		}
+	}
+
+	// 背景画像の変更（実際に使うときは数字じゃなくわかりやすい単語を付けてください）
+	&--01 {
+		&::before {
+			background: url("../images/top/bg_img01.jpg") no-repeat center center;
+			background-size: cover;
+		}
+	}
+
+	&--02 {
+		&::before {
+			background: url("../images/top/bg_img02.jpg") no-repeat center center;
+			background-size: cover;
+		}
+	}
+
+	&--03 {
+		&::before {
+			background: url("../images/top/bg_img03.jpg") no-repeat center center;
+			background-size: cover;
+		}
+	}
+
+	&--04 {
+		&::before {
+			background: url("../images/top/bg_img04.jpg") no-repeat center center;
+			background-size: cover;
+		}
+	}
+
+	&--05 {
+		&::before {
+			background: url("../images/top/bg_img05.jpg") no-repeat center center;
+			background-size: cover;
+		}
+	}
+
+	&--06 {
+		&::before {
+			background: url("../images/top/bg_img06.jpg") no-repeat center center;
+			background-size: cover;
+		}
+	}
+}

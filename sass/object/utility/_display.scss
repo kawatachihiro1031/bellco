@@ -1,0 +1,201 @@
+/* =========================================================
+display - ブレイクポイントごとに表示切替
+========================================================= */
+
+.u-none {
+  display: none !important;
+}
+
+.u-inline {
+  display: inline !important;
+}
+
+.u-inline-block {
+  display: inline-block !important;
+}
+
+.u-block {
+  display: block !important;
+}
+
+.u-table {
+  display: table !important;
+}
+
+.u-table-row {
+  display: table-row !important;
+}
+
+.u-table-cell {
+  display: table-cell !important;
+}
+
+.u-flex {
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.u-inline-flex {
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+}
+
+@include mq(sm, min) {
+  .u-sm-none {
+    display: none !important;
+  }
+  .u-sm-inline {
+    display: inline !important;
+  }
+  .u-sm-inline-block {
+    display: inline-block !important;
+  }
+  .u-sm-block {
+    display: block !important;
+  }
+  .u-sm-table {
+    display: table !important;
+  }
+  .u-sm-table-row {
+    display: table-row !important;
+  }
+  .u-sm-table-cell {
+    display: table-cell !important;
+  }
+  .u-sm-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .u-sm-inline-flex {
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+  }
+}
+
+@include mq(md, min) {
+  .u-mu-none {
+    display: none !important;
+  }
+  .u-mu-inline {
+    display: inline !important;
+  }
+  .u-mu-inline-block {
+    display: inline-block !important;
+  }
+  .u-mu-block {
+    display: block !important;
+  }
+  .u-mu-table {
+    display: table !important;
+  }
+  .u-mu-table-row {
+    display: table-row !important;
+  }
+  .u-mu-table-cell {
+    display: table-cell !important;
+  }
+  .u-mu-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .u-mu-inline-flex {
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+  }
+}
+
+@include mq(lg, min) {
+  .u-lg-none {
+    display: none !important;
+  }
+  .u-lg-inline {
+    display: inline !important;
+  }
+  .u-lg-inline-block {
+    display: inline-block !important;
+  }
+  .u-lg-block {
+    display: block !important;
+  }
+  .u-lg-table {
+    display: table !important;
+  }
+  .u-lg-table-row {
+    display: table-row !important;
+  }
+  .u-lg-table-cell {
+    display: table-cell !important;
+  }
+  .u-lg-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .u-lg-inline-flex {
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+  }
+}
+
+@include mq(xl, min) {
+  .u-xl-none {
+    display: none !important;
+  }
+  .u-xl-inline {
+    display: inline !important;
+  }
+  .u-xl-inline-block {
+    display: inline-block !important;
+  }
+  .u-xl-block {
+    display: block !important;
+  }
+  .u-xl-table {
+    display: table !important;
+  }
+  .u-xl-table-row {
+    display: table-row !important;
+  }
+  .u-xl-table-cell {
+    display: table-cell !important;
+  }
+  .u-xl-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .u-xl-inline-flex {
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+  }
+}
+
+@media print {
+  .u-print-none {
+    display: none !important;
+  }
+  .u-print-inline {
+    display: inline !important;
+  }
+  .u-print-inline-block {
+    display: inline-block !important;
+  }
+  .u-print-block {
+    display: block !important;
+  }
+  .u-print-table {
+    display: table !important;
+  }
+  .u-print-table-row {
+    display: table-row !important;
+  }
+  .u-print-table-cell {
+    display: table-cell !important;
+  }
+  .u-print-flex {
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  .u-print-inline-flex {
+    display: -ms-inline-flexbox !important;
+    display: inline-flex !important;
+  }
+}

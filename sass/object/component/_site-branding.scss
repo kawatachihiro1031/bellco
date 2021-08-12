@@ -1,0 +1,29 @@
+/* ---------------------------------------------------------------
+	site-branding - サイトのロゴなど
+--------------------------------------------------------------- */
+
+.c-site-branding {
+	&__link {
+		@include flexbox;
+		@include align-items(center);
+
+		@include font-size(22);
+		color: #333333;
+		text-decoration: none;
+
+		&:hover {
+			color: #333333;
+			text-decoration: none;
+		}
+	}
+
+	&__logo {
+		width: 150px;
+		height: auto;
+		margin-right: .1rem;
+
+		@include mq(md, min) {
+			width: 220px;
+		}
+	}
+}

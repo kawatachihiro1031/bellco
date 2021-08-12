@@ -1,0 +1,121 @@
+/* =========================================================
+media - 画像関係のコンポーネント
+========================================================= */
+
+// ---------------------------------------------------------------
+//  ■画像のレスポンシブ化やトリミングなど
+// ---------------------------------------------------------------
+
+// ・画像をレスポンシブに可変させる
+// --------------------
+.c-responsive-img {
+	display: block;
+	height: auto;
+	max-width: 100%;
+	zoom: 0.5;
+
+	@include mq(sm, min) {
+		zoom: 1;
+	}
+
+	&--bg{
+		zoom: 1;
+	}
+}
+
+.c-center-img{
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// ・画像を円形に丸める
+// 元の画像の縦横比に依存するので、正円の場合は正方形の画像を使用してください。
+// --------------------
+.c-circle-img {
+	border-radius: 50%;
+}
+
+// ・画像のトリミング
+// 縦に合わせてトリミングします。
+// --------------------
+.c-trim-img {
+	position: relative;
+	overflow: hidden;
+	width: 100%;
+
+	&::before {
+		content: '';
+		display: block;
+		padding-top: 100%;
+	}
+
+	&__in {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		-webkit-transform: translate(-50%, -50%);
+		-ms-transform: translate(-50%, -50%);
+		transform: translate(-50%, -50%);
+		max-width: none;
+		width: auto;
+		height: 100%;
+	}
+
+	&--3to4 {
+		&::before {
+			padding-top: 75%;
+		}
+	}
+
+	&--golden {
+		&::before {
+			padding-top: 61.83%;
+		}
+	}
+
+	&--silver {
+		&::before {
+			padding-top: 70.66%;
+		}
+	}
+}
+
+.c-zoom-img {
+	display: inline-block;
+	overflow: hidden;
+
+	&__in {
+		display: block;
+		transition: .3s;
+	}
+
+	&:hover {
+		.c-zoom-img__in {
+			transform: scale(1.1, 1.1);
+		}
+	}
+}
+
+.c-hover-img {
+	display: inline-block;
+	transition: .3s;
+
+	&:hover {
+		opacity: .7;
+	}
+}
+
+// 動画埋め込み
+.c-youtube{
+	position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+
+	iframe{
+		position: absolute;
+		top: 0;
+		right: 0;
+		width: 100%;
+		height: 100%;
+	}
+}

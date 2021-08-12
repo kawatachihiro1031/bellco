@@ -1,0 +1,94 @@
+/* =========================================================
+section - セクションの大枠など
+========================================================= */
+
+// ---------------------------------------------------------------
+//  ■セクションの大枠
+// ---------------------------------------------------------------
+.p-section {
+	padding: 4rem 0;
+	@include mq(md, min) {
+		padding: 5rem 0;
+	}
+	@include mq(lg, min) {
+		padding: 6rem 0;
+	}
+
+	&--sm{
+		padding: 1rem 0;
+		@include mq(md, min) {
+			padding: 2rem 0;
+		}
+		@include mq(lg, min) {
+			padding: 3rem 0;
+		}
+	}
+
+	&--pt-0{
+		padding-top: 0;
+	}
+	
+	&--into{
+		margin-top: -2rem;
+	}
+
+	&--bg01{
+		background-color: #e4f8ff;
+	}
+
+	&--bg-ttl{
+		background: url(../images/ttl_bg_movie.png)left top no-repeat;
+		background-size: 125px;
+		@include mq(lg, min) {
+			background: url(../images/ttl_bg_movie.png)left top no-repeat;
+		background-size: 310px;
+		}
+	}
+
+	&--bg-ttl-plan{
+		background: #f7f6f1 url(../images/ttl_bg_plan.png)right top no-repeat;
+		background-size: 270px;
+		@include mq(lg, min) {
+		background-size: 670px;
+		}
+	}
+
+	&--bg-ttl-voice{
+		background: url(../images/ttl_bg_voice.png)center top no-repeat;
+		background-size: 110px;
+		@include mq(lg, min) {
+			background-size: 270px;
+		}
+	}
+
+	&--bg-ttl-flow{
+		background: #fff3f4 url(../images/ttl_bg_flow.png)left top no-repeat;
+		background-size: 100px;
+		@include mq(lg, min) {
+			background-size: 228px;
+		}
+	}
+
+	&--bg-ttl-over{
+		background: #fff3f4 url(../images/ttl_bg_overview.png)right top no-repeat;
+		background-size: 190px;
+		@include mq(lg, min) {
+			background-size: 450px;
+		}
+	}
+
+	&--sec1{
+		position: relative;
+		background: url(../images/sec1_img03_pc.jpg)right center no-repeat;
+
+		.p-sec1-txt{
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			margin: auto;
+			@include flex-center;
+		}
+	}
+}

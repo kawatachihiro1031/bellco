@@ -1,0 +1,24 @@
+/* =========================================================
+gmap - Google Maps関連
+========================================================= */
+
+.c-gmap {
+	margin: 0 auto;
+	position: relative;
+	width: 100%;
+	//パディングで比率を調整
+	padding-top: 56.25%;
+	
+	//pcサイズ以上
+	@include mq(lg, min) {
+		padding-top: 30.22%;
+	}
+	
+	iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100% !important;
+		height: 100% !important;
+	}
+}

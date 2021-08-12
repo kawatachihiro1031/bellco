@@ -1,0 +1,96 @@
+@charset "utf-8";
+@import "compass";
+
+// ---------------------------------------------------------------
+//  ■Core
+//  Mixinやfontの設定など
+// ---------------------------------------------------------------
+
+/* ---------------------------------------------------------
+Mixin
+--------------------------------------------------------- */
+@import "core/mixin/_flex.scss";
+@import "core/mixin/_shadows.scss";
+@import "core/mixin/_other.scss";
+
+/* ---------------------------------------------------------
+variable
+--------------------------------------------------------- */
+@import "core/variable/_color.scss";
+@import "core/variable/_font.scss";
+@import "core/variable/_media-query.scss";
+@import "core/variable/_typography.scss";
+
+
+
+// ---------------------------------------------------------------
+//  ■Foundation
+//  リセットCSS、NormarizeCSSなどの、すべてのベースとなるCSS
+//  基本的にコードは追加しない
+// ---------------------------------------------------------------
+@import "foundation/_reset.scss";
+@import "foundation/_base.scss";
+
+
+
+// ---------------------------------------------------------------
+//  ■Layout
+//  パーツの配置や、ラッパーとしての幅や高さなどを決定するクラス
+//  接頭辞としてl-をつける
+// ---------------------------------------------------------------
+@import "layout/_container.scss";
+@import "layout/_grid.scss";
+@import "layout/_header.scss";
+@import "layout/_main.scss";
+@import "layout/_footer.scss";
+
+
+
+// ---------------------------------------------------------------
+//  ■Object
+//  「OOCSS」のコンセプトをもとにしたビジュアルパターンが主に該当する。
+//  ObjectレイヤーはComponent、Project、Utilityの3つの子レイヤーに分けられる。
+// ---------------------------------------------------------------
+
+/* ---------------------------------------------------------
+Component
+ページをまたいで使われる各種パーツを定義するクラス
+そのパーツ内で常に同様の振る舞いをするものに関してのみスタイルを定義
+接頭辞としてc-をつける
+--------------------------------------------------------- */
+@import "object/component/_site-branding.scss";
+@import "object/component/_copyright.scss";
+@import "object/component/_navigation.scss";
+@import "object/component/_title.scss";
+@import "object/component/_txt.scss";
+@import "object/component/_button.scss";
+@import "object/component/_media.scss";
+@import "object/component/_gmap.scss";
+@import "object/component/_js.scss";
+
+/* ---------------------------------------------------------
+Project
+プロジェクト固有のスタイルを定義するクラス
+プロジェクトで使い回すスタイルのほとんどはProjectレイヤーに追加することになる
+接頭辞としてp-をつける
+--------------------------------------------------------- */
+@import "object/project/_header.scss";
+@import "object/project/_footer.scss";
+@import "object/project/_top.scss";
+@import "object/project/_section.scss";
+@import "object/project/_card.scss";
+@import "object/project/_list.scss";
+@import "object/project/_alternate-layout.scss";
+
+/* ---------------------------------------------------------
+Utility
+調整用のクラス
+margin、padding、font-size、colorなどを付与するのに使用
+他種類のパーツ間の空き調整や、パーツとして認められないような、
+自由な振る舞いをする要素に対してはこちらのクラスを使用
+接頭辞としてu-をつける
+--------------------------------------------------------- */
+@import "object/utility/_text.scss";
+@import "object/utility/_margin.scss";
+@import "object/utility/_display.scss";
+@import "object/utility/_flex.scss";

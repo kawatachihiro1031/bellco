@@ -1,0 +1,87 @@
+/* =========================================================
+button - ボタン関係のコンポーネント
+========================================================= */
+
+// ---------------------------------------------------------------
+//  ■メインのボタン
+// ---------------------------------------------------------------
+.c-basic-btn {
+	@include flex-center;
+	background-color: $sub-color01;
+	color: #ffffff;
+	@include font-size(16);
+	font-weight: bold;
+	height: 40px;
+	max-width: 300px;
+	transition: .3s;
+
+	@include mq(sm, min) {
+		height: 60px;
+		max-width: 400px;
+	}
+
+	&:hover{
+		color: #ffffff;
+		opacity: 0.8;
+	}
+}
+
+.c-intobtn{
+	position: relative;
+
+	&__item{
+		position: absolute;
+		width: 80%;
+		bottom: -20px;
+		left: 0;
+		right: 0;
+		margin: auto;
+		text-decoration: none;
+
+		@include mq(lg, min) {
+			width: 50%;
+			max-width: 430px;
+			height: 60px;
+			bottom: -30px;
+		}
+
+		&--flow{
+			@include mq(lg, min) {
+				left: 11%;
+			}
+			@include mq(xl, min) {
+				left: 6%;
+			}
+		}
+	}
+
+	&--btm{
+		.c-intobtn__item{
+			bottom: 10%;
+		}
+	}
+}
+
+// ---------------------------------------------------------------
+//  ■ページトップへ戻るボタン
+// ---------------------------------------------------------------
+.c-pagetop-btn {
+	position: fixed;
+	bottom: -20px;
+	right: -20px;
+	@include flex-center;
+	width: 94px;
+	height: 80px;
+	text-decoration: none;
+	
+	z-index: 5;
+
+	& img{
+		transition: opacity .3s;
+	}
+
+	&:hover img{
+		opacity: .7;
+	}
+
+}

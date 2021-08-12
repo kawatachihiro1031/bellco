@@ -1,0 +1,95 @@
+/* =========================================================
+title - 共通のタイトルやテキストなど
+========================================================= */
+
+// ---------------------------------------------------------------
+//  ■セクションのタイトル
+// ---------------------------------------------------------------
+.c-contents-ttl{
+	margin-bottom: 1rem;
+	@include mq(md, min) {
+		margin-bottom: 2rem;
+	}
+
+	&__img{
+		zoom: 0.35;
+
+		@include mq(md, min) {
+			zoom: 0.5;
+		}
+
+		&.syokusyu{
+			margin-right: -130px;
+		}
+	}
+	
+}
+
+.p-cross-ttl{
+	position: relative;
+	line-height: 0;
+
+	.c-contents-ttl{
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		margin: auto;
+
+		@include flex-center;
+	}
+}
+.c-basic-ttl {
+	font-weight: 700;
+
+	&--xs {
+		@include rhythm-margins(0, 1);
+		@include adjust-font-size-to(14px, 1);
+
+		@include mq(lg, min) {
+			@include rhythm-margins(0, 1);
+			@include adjust-font-size-to(16px, 1);
+		}
+	}
+
+	&--sm {
+		@include rhythm-margins(0, 1);
+		@include adjust-font-size-to(16px, 1);
+
+		@include mq(lg, min) {
+			@include rhythm-margins(0, 1);
+			@include adjust-font-size-to(18px, 1);
+		}
+	}
+
+	&--md {
+		@include rhythm-margins(0, 1);
+		@include adjust-font-size-to(20px, 1.5);
+
+		@include mq(lg, min) {
+			@include rhythm-margins(0, 1);
+			@include adjust-font-size-to(22px, 1.5);
+		}
+	}
+
+	&--lg {
+		@include rhythm-margins(0, 1);
+		@include adjust-font-size-to(34px, 2);
+
+		@include mq(lg, min) {
+			@include rhythm-margins(0, 2);
+			@include adjust-font-size-to(38px, 2);
+		}
+	}
+
+	&--xl {
+		@include rhythm-margins(0, 1);
+		@include adjust-font-size-to(40px, 3);
+
+		@include mq(lg, min) {
+			@include rhythm-margins(0, 2);
+			@include adjust-font-size-to(45px, 3);
+		}
+	}
+}

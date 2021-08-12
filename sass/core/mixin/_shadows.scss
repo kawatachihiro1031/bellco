@@ -1,0 +1,28 @@
+/* =========================================================
+shadow - シャドウ
+デフォルトでは色が濃い目なので使う際に調整してください。
+========================================================= */
+
+// ・下方向のみのシャドウ
+// --------------------
+@mixin box-shadow($horizontal: 10px, $vertical: 10px, $blur: 0px, $shadow: 0px, $color: #000000){
+	-webkit-box-shadow: $horizontal $vertical $blur $shadow $color;
+	-moz-box-shadow: $horizontal $vertical $blur $shadow $color;
+	box-shadow: $horizontal $vertical $blur $shadow $color;
+}
+
+// ・上下のみのシャドウ
+// --------------------
+@mixin box-shadow-double($horizontal-1: 10px, $vertical-1: 10px, $blur-1: 0px, $shadow-1: 0px, $color-1: #000000, $horizontal-2: 10px, $vertical-2: 10px, $blur-2: 0px, $shadow-2: 0px, $color-2: #000000){
+	-webkit-box-shadow: $horizontal-1 $vertical-1 $blur-1 $shadow-1 $color-1, $horizontal-2 $vertical-2 $blur-2 $shadow-2 $color-2;
+	-moz-box-shadow: $horizontal-1 $vertical-1 $blur-1 $shadow-1 $color-1, $horizontal-2 $vertical-2 $blur-2 $shadow-2 $color-2;
+	box-shadow: $horizontal-1 $vertical-1 $blur-1 $shadow-1 $color-1, $horizontal-2 $vertical-2 $blur-2 $shadow-2 $color-2;
+}
+
+// ・テキストのシャドウ
+// --------------------
+@mixin txt-shadow($horizontal: 10px, $vertical: 10px, $blur: 0px, $color: #000000){
+	-webkit-text-shadow: $horizontal $vertical $blur $color;
+	-moz-text-shadow: $horizontal $vertical $blur $color;
+	text-shadow: $horizontal $vertical $blur $color;
+}

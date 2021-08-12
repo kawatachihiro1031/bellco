@@ -1,0 +1,35 @@
+/* =========================================================
+text - 共通のテキストなど
+========================================================= */
+
+// ---------------------------------------------------------------
+//  ■基本となるテキスト
+// ---------------------------------------------------------------
+
+%basic-txt {
+	@include rhythm-margins(0, .25);
+	@include adjust-font-size-to(14px, 1);
+	@include mq(lg, min) {
+		@include rhythm-margins(0, .5);
+		@include adjust-font-size-to(16px, 1);
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}
+
+.c-basic-txt {
+	@extend %basic-txt;
+}
+
+.c-small-txt {
+	@include rhythm-margins(0, .12);
+	@include adjust-font-size-to(12px, 1);
+	@include mq(lg, min) {
+		@include rhythm-margins(0, .25);
+		@include adjust-font-size-to(14px, 1);
+	}
+	&:last-of-type {
+		margin-bottom: 0;
+	}
+}

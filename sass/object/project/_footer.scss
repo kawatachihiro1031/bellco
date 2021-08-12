@@ -1,0 +1,37 @@
+/* =========================================================
+footer - フッター内のクラス
+========================================================= */
+.p-footer{
+	@include flex-center;
+	@include flex-direction(column);
+
+	&__txt{
+		font-family: $font-family-original-01;
+		color: #ffffff;
+		margin-top: 0.5rem;
+		text-align: center;
+		@include font-size(15);
+
+		&--sm{
+			@include font-size(14);
+		}
+
+		a{
+			color: #ffffff;
+		}
+	}
+}
+
+.p-footer-copylight{
+	@include font-size(10);
+	font-weight: bold;
+	color: #9b9b9b;
+	text-align: center;
+	letter-spacing: 1px;
+	line-height: 1.5;
+	margin: 1.5rem 0;
+	
+
+	@include mq(lg, min) {
+	}
+}
