@@ -13,6 +13,7 @@ button - ボタン関係のコンポーネント
 	font-weight: bold;
 	height: 40px;
 	max-width: 300px;
+	text-decoration: none;
 	transition: .3s;
 
 	@include mq(sm, min) {
@@ -23,6 +24,10 @@ button - ボタン関係のコンポーネント
 	&:hover{
 		color: #ffffff;
 		opacity: 0.8;
+	}
+
+	&--center{
+		margin: 0 auto;
 	}
 }
 

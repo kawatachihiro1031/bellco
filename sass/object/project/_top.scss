@@ -122,3 +122,10 @@ top
 #sf-form-page .sf-form-title-group{
 	display: none!important;
 }
+
+.p-thanks-txt{
+	@include font-size(18);
+	@include mq(lg, min) {
+		@include font-size(20);
+	}
+}
