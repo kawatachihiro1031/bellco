@@ -1720,6 +1720,9 @@ button - ボタン関係のコンポーネント
   color: #ffffff;
   opacity: 0.8;
 }
+.c-basic-btn--w100 {
+  max-width: 100%;
+}
 .c-basic-btn--center {
   margin: 0 auto;
 }
