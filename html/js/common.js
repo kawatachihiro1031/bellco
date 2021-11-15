@@ -126,14 +126,14 @@ CountdownTimer.prototype = {
 	}
 }
 function CDT() {
-	var tl = new Date('2021/10/31 23:59:59');// ここで日付を指定
+	var tl = new Date('2021/11/30 12:59:59');// ここで日付を指定
 	var timer = new CountdownTimer('CDT', tl, '終了しました');
 	timer.countDown();
 }
 
 
 function CDT01() {
-	var tl = new Date('2021/10/31 23:59:59');// ここで日付を指定
+	var tl = new Date('2021/11/30 12:59:59');// ここで日付を指定
 	var timer = new CountdownTimer('CDT01', tl, '終了しました');
 	timer.countDown();
 }
