@@ -33,7 +33,8 @@ section - セクションの大枠など
 	}
 
 	&--bg01{
-		background-color: #e4f8ff;
+		background: rgb(242, 231, 179);
+		background: linear-gradient(0deg, rgba(242, 231, 179, 1) 50%, rgba(255, 255, 255, 1) 50%);
 	}
 
 	&--bg-ttl{
@@ -46,23 +47,24 @@ section - セクションの大枠など
 	}
 
 	&--bg-ttl-plan{
-		background: #f7f6f1 url(../images/ttl_bg_plan.png)right top no-repeat;
-		background-size: 270px;
+		background: #f7f6f1 url(../images/ttl_bg_plan.png)center top no-repeat;
+		background-size: 140px;
 		@include mq(lg, min) {
-		background-size: 670px;
+		background-size: 280px;
 		}
 	}
 
 	&--bg-ttl-voice{
 		background: url(../images/ttl_bg_voice.png)center top no-repeat;
 		background-size: 110px;
+		background-color: rgb(242, 231, 179);
 		@include mq(lg, min) {
 			background-size: 270px;
 		}
 	}
 
 	&--bg-ttl-flow{
-		background: #fff3f4 url(../images/ttl_bg_flow.png)left top no-repeat;
+		background: #fff3f4 url(../images/ttl_bg_flow.png)center top no-repeat;
 		background-size: 100px;
 		@include mq(lg, min) {
 			background-size: 228px;
@@ -70,7 +72,7 @@ section - セクションの大枠など
 	}
 
 	&--bg-ttl-over{
-		background: #fff3f4 url(../images/ttl_bg_overview.png)right top no-repeat;
+		background: #fff3f4 url(../images/ttl_bg_overview.png)center top no-repeat;
 		background-size: 190px;
 		@include mq(lg, min) {
 			background-size: 450px;

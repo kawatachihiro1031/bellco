@@ -1967,7 +1967,7 @@ header - ヘッダー内のクラス
   transition: .3s;
   background: url(../images/main_bg_sp.jpg) center center no-repeat;
   background-size: cover;
-  height: calc(100vh - 100px);
+  height: calc(100vh - 77px);
 }
 @media screen and (min-width: 992px) {
   .p-header {
@@ -2060,27 +2060,12 @@ header - ヘッダー内のクラス
   text-decoration: none;
 }
 .p-header__fixbtn--sp {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  background-color: #ff969d;
-  color: #ffffff;
-  font-size: 18px;
-  font-size: 1.125rem;
-  font-weight: bold;
-  height: 70px;
   width: calc(100% - 30px);
   left: 0;
   right: 0;
-  bottom: 15px;
+  bottom: 10px;
   margin: auto;
-  transition: opacity 0.3s;
+  text-align: center;
 }
 .p-header__fixbtn--sp:hover {
   opacity: 0.7;
@@ -2089,7 +2074,7 @@ header - ヘッダー内のクラス
 .p-header__thanksttl {
   font-size: 28px;
   font-size: 1.75rem;
-  color: #ffffff;
+  color: #ff969d;
   font-weight: bold;
   text-align: center;
   line-height: 1.2;
@@ -2186,6 +2171,7 @@ top
   border: 1px solid #d3b320;
   padding: 1rem;
   position: relative;
+  background-color: #ffffff;
 }
 @media screen and (min-width: 992px) {
   .p-voice-contents-wrap {
@@ -2278,10 +2264,15 @@ top
   margin-left: auto;
 }
 .p-sec4-item--05 {
-  background: url(../images/sec4_img11_pc.png) center right no-repeat;
+  background: url(../images/sec4_img11_pc.png) center center no-repeat;
+  background-size: 95%;
 }
 .p-sec4-item__txt {
-  padding: 300px 0 80px;
+  padding: 220px 0 60px;
+}
+.p-sec4-item__center {
+  margin: 0 auto;
+  padding: 410px 0 0px;
 }
 
 #sf-form-page .layout-nocover .divider,
@@ -2298,6 +2289,11 @@ top
     font-size: 20px;
     font-size: 1.25rem;
   }
+}
+
+.p-sec10-bg {
+  background: url(../images/sec10_img02.png) right 10% no-repeat;
+  background-size: 75%;
 }
 
 /* =========================================================
@@ -2336,7 +2332,8 @@ section - セクションの大枠など
   margin-top: -2rem;
 }
 .p-section--bg01 {
-  background-color: #e4f8ff;
+  background: #f2e7b3;
+  background: linear-gradient(0deg, #f2e7b3 50%, #ffffff 50%);
 }
 .p-section--bg-ttl {
   background: url(../images/ttl_bg_movie.png) left top no-repeat;
@@ -2349,17 +2346,18 @@ section - セクションの大枠など
   }
 }
 .p-section--bg-ttl-plan {
-  background: #f7f6f1 url(../images/ttl_bg_plan.png) right top no-repeat;
-  background-size: 270px;
+  background: #f7f6f1 url(../images/ttl_bg_plan.png) center top no-repeat;
+  background-size: 140px;
 }
 @media screen and (min-width: 992px) {
   .p-section--bg-ttl-plan {
-    background-size: 670px;
+    background-size: 280px;
   }
 }
 .p-section--bg-ttl-voice {
   background: url(../images/ttl_bg_voice.png) center top no-repeat;
   background-size: 110px;
+  background-color: #f2e7b3;
 }
 @media screen and (min-width: 992px) {
   .p-section--bg-ttl-voice {
@@ -2367,7 +2365,7 @@ section - セクションの大枠など
   }
 }
 .p-section--bg-ttl-flow {
-  background: #fff3f4 url(../images/ttl_bg_flow.png) left top no-repeat;
+  background: #fff3f4 url(../images/ttl_bg_flow.png) center top no-repeat;
   background-size: 100px;
 }
 @media screen and (min-width: 992px) {
@@ -2376,7 +2374,7 @@ section - セクションの大枠など
   }
 }
 .p-section--bg-ttl-over {
-  background: #fff3f4 url(../images/ttl_bg_overview.png) right top no-repeat;
+  background: #fff3f4 url(../images/ttl_bg_overview.png) center top no-repeat;
   background-size: 190px;
 }
 @media screen and (min-width: 992px) {

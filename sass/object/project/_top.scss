@@ -16,6 +16,7 @@ top
 		border: 1px solid #d3b320;
 		padding: 1rem;
 		position: relative;
+		background-color: #ffffff;
 
 		@include mq(lg, min) {
 			@include flexbox;
@@ -109,11 +110,17 @@ top
 	}
 
 	&--05{
-		background: url(../images/sec4_img11_pc.png)center right no-repeat;
+		background: url(../images/sec4_img11_pc.png) center center no-repeat;
+		background-size: 95%;
 	}
 
 	&__txt{
-		padding: 300px 0 80px;
+		padding: 220px 0 60px;
+	}
+
+	&__center{
+		margin: 0 auto;
+		padding: 410px 0 0px;
 	}
 }
 
@@ -128,4 +135,9 @@ top
 	@include mq(lg, min) {
 		@include font-size(20);
 	}
+}
+
+.p-sec10-bg{
+	background: url(../images/sec10_img02.png) right 10% no-repeat;
+	background-size: 75%;
 }
